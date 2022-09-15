@@ -333,6 +333,7 @@ ul {
   background-color: var(--second-bg-clr);
   width: 358px;
   height: 50px;
+  padding-left: 16px;
 }
 
 .email-form-btn {
@@ -736,9 +737,15 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 0;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.close-modal:focus,
+.close-modal:hover {
+  fill: var(--main-clr);
 }
 
 .registred-form {
@@ -748,36 +755,108 @@ ul {
 }
 
 .registred-form-title {
+  display: block;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-clr);
-  padding: 40px 40px 12px 40px;
+  margin: 40px 40px 12px 40px;
 }
 
 .registred-form-group {
   display: flex;
   flex-direction: column;
-  column-gap: 10px;
-  margin: 0 39px 20px;
+}
+
+.registred-form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.registred-form-label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
 }
 
 .registred-form-input {
   width: 448px;
   height: 40px;
+  padding-left: 42px;
+  padding-right: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: var(--border-radius);
+  outline: transparent;
+  transition: border-color var(--transition-main);
+}
+
+.registred-form-input:focus {
+  border-color: var(--main-clr);
+}
+
+.registred-form-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  transition: border-color var(--transition-main);
+}
+
+.registred-form-input:focus + .registred-form-icon {
+  fill: var(--main-clr);
+}
+
+.registred-form-agree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 7px;
 }
 
 .registred-form-textarea {
-  width: 448px;
+  display: block;
+  width: 100%;
   height: 120px;
+  margin-bottom: 20px;
+  font-size: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: var(--border-radius);
   resize: none;
   padding: 12px 16px;
+  outline: transparent;
+  transition: border-color var(--transition-main);
+}
+
+.registred-form-textarea::placeholder {
+  font-size: 12px;
+}
+
+.registred-form-textarea:focus {
+  border-color: var(--main-clr);
+}
+
+.icon-checked {
+  opacity: 0;
+  transition: opacity var(--transition-main);
+}
+
+.registred-form-chekbox:checked + .registred-form-chekbox-icons .icon-checked {
+  opacity: 1;
+}
+
+.icon-dischecked {
+  transition: opacity var(--transition-main);
+}
+
+.registred-form-chekbox:checked + .registred-form-chekbox-icons .icon-dischecked {
+  opacity: 0;
+}
+
+.registred-form-text {
+  user-select: none;
 }
 
 .contract {
@@ -786,9 +865,8 @@ ul {
 }
 
 .registred-form-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 0;
+  display: block;
+  margin: 0 auto;
   width: 200px;
   height: 50px;
   color: var(--main-bg-clr);

@@ -413,35 +413,39 @@
         <form class="registred-form" name="registred-form">
           <strong class="registred-form-title">Залиште свої дані, ми вам передзвонимо</strong>
           <div class="registred-form-group" role="group">
-            <label>
-              <span>Ім'я</span>
-              <input class="registred-form-input" type="text" name="text" />
-              <svg width="18" height="18">
-                <!-- <use href="./images/icons.svg#icon-person-black"></use> -->
+            <label class="registred-form-field">
+              <span class="registred-form-label">Ім'я</span>
+              <input class="registred-form-input" type="text" name="text" placeholder=" " />
+              <svg class="registred-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </label>
+            <label class="registred-form-field">
+              <span class="registred-form-label">Телефон</span>
+              <input class="registred-form-input" type="tel" name="tel" placeholder=" " />
+              <svg class="registred-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </label>
+            <label class="registred-form-field">
+              <span class="registred-form-label">Пошта</span>
+              <input class="registred-form-input" type="email" name="email" placeholder=" " />
+              <svg class="registred-form-icon" width="18" height="18">
+                <use href="images/icons.svg#icon-email-black"></use>
               </svg>
             </label>
             <label>
-              <span>Телефон</span>
-              <input class="registred-form-input" type="tel" name="tel" />
-              <svg width="18" height="18">
-                <!-- <use href="./images/icons.svg#icon-phone-black"></use> -->
-              </svg>
-            </label>
-            <label>
-              <span>Пошта</span>
-              <input class="registred-form-input" type="email" name="email" />
-              <svg width="18" height="18">
-                <!-- <use href="images/icons.svg#icon-email-black"></use> -->
-              </svg>
-            </label>
-            <label>
-              Коментар
+              <span class="registred-form-label">Коментар</span>
               <textarea class="registred-form-textarea" name="registred-form-textarea" rows="6" placeholder="Введіть текст"></textarea>
             </label>
           </div>
-          <label>
-            <input class="registred-form-chekbox" type="checkbox" />
-            <span>Погоджуюся з розсилкою та приймаю <a class="contract" href="">Умови договору</a></span>
+          <label class="registred-form-agree">
+            <input class="registred-form-chekbox visually-hidden" type="checkbox" />
+            <svg class="registred-form-chekbox-icons" width="16" height="15">
+              <use class="icon-checked" href="./images/icons.svg#iconcheck"></use>
+              <use class="icon-dischecked" href="./images/icons.svg#discheck"></use>
+            </svg>
+            <span class="registred-form-text">Погоджуюся з розсилкою та приймаю <a class="contract" href="">Умови договору</a></span>
           </label>
           <button class="registred-form-btn" type="submit">Відправити</button>
         </form>
